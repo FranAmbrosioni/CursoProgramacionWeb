@@ -106,32 +106,40 @@ body{
 }
 img{
     width: 100%;
-}
-
-.row{
+    margin: 5px;
+    padding: 5px;
     
-    display: flex;
-    flex-wrap: wrap;
-    padding: 5px;
-
 }
 
-.columnas{
-    flex: 25%;
-    padding: 5px;
+.flip3D{
+    width: 200px;
+    height: 200px;
+   
+    margin: 10px;
+    float: left;
 }
 
-.columnas img{
-    margin-top: 5px;
+.flip3D .front{
+    position: absolute;
+    transform: perspective( 600px ) rotateY( 0deg );
+    background: radial-gradient(rgb(3, 243, 3),rgb(0, 7, 102)); width: 240px; height: 200px;border-radius: 7px;
+    backface-visibility: hidden;
+    transition: transform .5s linear 0s;
+}
+.flip3D .back{
+    position: absolute;
+    transform: perspective( 600px ) rotateY( 180deg );
+    background: linear-gradient(yellow,red); width: 240px; height: 200px;border-radius: 7px;
+    backface-visibility: hidden;
+    transition: transform .5s linear 0s;
 }
 
-@media (max-width:600px){
-    .columnas{
-        flex: 100%;
-    }
+.flip3D:hover .front{
+    transform: perspective( 600px ) rotateY( -180deg );
 }
-@media (max-width:800px){
-    .columnas{
-        flex: 50%;
-    }
+.flip3D:hover .back{
+    transform: perspective( 600px ) rotateY( 0deg );
 }
+
+
+
