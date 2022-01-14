@@ -18,37 +18,11 @@ body{
     z-index: 1;
 
 }
-.headernavbar{
 
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    list-style: none;
-    justify-content: space-evenly;
-    padding: 10px;
-  
-}
-
-.headernavbar li a{
-
- text-decoration: none;
- color: black;
- padding: 0.3rem;
- font-size: 1.2rem;
-}
-
-.headernavbar li a:hover{
-     background-color: black;
-     color: beige;
-     font-weight: bold;
-     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-     border-bottom : 0.1rem solid #a76f6f;
-     border-radius: 0.5rem;
-}
 .maintitulo{
    display: flex;
    width: 400px;
-   height: 70px;
+   height: 80px;
    font-size: 15px;
    line-height: 40px;
    position: relative;
@@ -76,7 +50,7 @@ body{
     box-shadow: rgb(43  15  19 / 30%) 0.1rem 1.2rem 1rem ;
     padding-top: 100px;
     border: #a76f6f;
-    width: 70%;
+    
 }
 
 .main p{
